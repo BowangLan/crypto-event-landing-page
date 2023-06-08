@@ -1,11 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Press+Start+2P&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --header-bg: rgba(4, 1, 30, 0.6);
+  --orenge: #F76C3D;
+  --indigo: #36176E;
+  --main-color: var(--indigo);
+
+  --shadow-1: rgba(60, 64, 67, 0.20) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  --shadow-2: rgba(60, 64, 67, 0.30) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+  /* --section-bg: linear-gradient(90deg, rgba(54,23,110,1) 0%, rgba(138,0,72,1) 60%, rgba(131,33,0,1) 100%); */
+  --section-bg: linear-gradient(90deg, rgba(40,10,94,1) 0%, rgba(93,4,51,1) 60%, rgba(87,23,2,1) 100%);
+  --card-hover-bg: linear-gradient(90deg, rgba(237,226,255,1) 0%, rgba(255,225,241,1) 60%, rgba(255,237,231,1) 100%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,12 +28,41 @@
   }
 }
 
+.shadow-1 {
+  box-shadow: var(--shadow-1);
+}
+
+.shadow-1:hover {
+  box-shadow: var(--shadow-2);
+}
+
+.section-bg {
+  background: var(--section-bg);
+}
+
+.card-hover-bg:hover {
+  background: var(--card-hover-bg);
+}
+
+.font-press {
+  font-family: 'Press Start 2P', cursive;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* color: rgb(var(--foreground-rgb)); */
+}
+
+.fcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.trans {
+  transition: all 200ms ease-in-out;
+}
+
+section:nth-child(odd) {
+  
 }

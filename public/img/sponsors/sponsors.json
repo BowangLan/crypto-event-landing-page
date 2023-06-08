@@ -1,0 +1,34 @@
+[
+  {
+    "icon": "img/sponsors/woodstock.png",
+    "link": "woodstockfund.com"
+  },
+  {
+    "icon": "img/sponsors/Tykhe Block Ventures.png",
+    "link": "tykheblock.ventures"
+  },
+  {
+    "icon": "img/sponsors/Momentum6.png",
+    "link": "momentum6.com"
+  },
+  {
+    "icon": "img/sponsors/18 Ventures.png",
+    "link": "18ventures.co"
+  },
+  {
+    "icon": "img/sponsors/888vc.png",
+    "link": "888vc.co"
+  },
+  {
+    "icon": "img/sponsors/Annex-Investments.png",
+    "link": "annexinvestments.com"
+  },
+  {
+    "icon": "img/sponsors/C3.png",
+    "link": "wegrowwithc3.com"
+  },
+  {
+    "icon": "img/sponsors/DSA-Investments.png",
+    "link": "dsainvestments.com"
+  }
+]

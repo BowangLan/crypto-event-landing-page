@@ -1,113 +1,119 @@
-import Image from 'next/image'
+import Image from "next/image";
+import { MdOutlineLocationOn } from "react-icons/md";
+import bg from "@/../public/img/crypto-city.png";
+import SectionContainer from "@/components/SectionContainer";
+import { speakers, sponsors } from "@/data";
+
+const Button = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <a className="px-12 py-3 text-black bg-white cursor-pointer hover:opacity-80 trans">
+      {children}
+    </a>
+  );
+};
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <div
+        className="relative w-full h-screen gap-3 fcenter"
+        style={{
+          backgroundSize: "cover",
+          backgroundImage: `url('${bg.src}')`,
+        }}
+      >
+        {/*  */}
+        <div className="absolute inset-0 bg-black opacity-60"></div>
+
+        <div className="absolute inset-0 z-20 gap-4 text-white fcenter">
+          {/* Line */}
+          <div className="flex items-center gap-6 text-white text-[24px]">
+            <span>August 10, 2023 at 6:30 PM</span>
+            <span className="inline-flex items-center gap-1">
+              <MdOutlineLocationOn size={26} color="#fff" />
+              <span>Dubai, Atlantis, The Palm</span>
+            </span>
+          </div>
+
+          {/* Line */}
+          <h1 className="font-press text-[64px] lg:text-[72px] text-center leading-[72px] lg:leading-[80px] mb-1">
+            CryptoOWL Conference
+          </h1>
+          {/* Line */}
+          <span className="text-[24px] text-center">
+            {
+              "Join the World's Top Crypto Companies and Blockchain Entrepreneurs"
+            }
+          </span>
+          {/* Line */}
+          <div className="flex gap-8 mt-8">
+            <Button>Learn More</Button>
+            <Button>Buy Ticket</Button>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      <SectionContainer title="About Us" className="text-white section-bg">
+        <span className="leading-10">
+          CryptoOWL is the blockchain conference network bringing together the
+          key players of crypto industry and experts to redefine the future of
+          finance. The edition of the CryptoOWL will take place during on August
+          10, 2023 in Dubai, with the world’s top crypto companies and
+          blockchain entrepreneurs. Today, UAE, specifically Dubai is gearing up
+          to become a global crypto hub. Thus, CryptoFOX will be the gathering
+          in the region on behalf of the world of blockchain and cryptocurrency,
+          with a wide range of topics focused on the financial technologies of
+          the future, extensive networking opportunities and participation from
+          more than 40 countries.
+        </span>
+      </SectionContainer>
+      <SectionContainer title="Sponsors" className="text-white section-bg">
+        <div className="grid grid-cols-4 gap-[32px] mt-8">
+          {sponsors.map((sponsor, i) => {
+            return (
+              <a
+                className="self-center px-4 py-12 rounded-lg bg-[rgb(226 242 254 / 50%)] fcenter justify-self-stretch trans bg-white hover:bg-blue-50 shadow-1"
+                href={`//${sponsor.link}`}
+                target="_blank"
+                key={i}
+              >
+                <div className="relative min-w-[140px] h-[36px]">
+                  <Image
+                    src={`/img/sponsors/${sponsor.icon}`}
+                    alt="sponsor"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </SectionContainer>
+      <SectionContainer title="Speakers" className="text-white section-bg">
+        <div className="grid grid-cols-4 gap-8 mt-8 text-black">
+          {speakers.map((s, i) => (
+            <div
+              key={i}
+              className="group fcenter px-4 h-[250px] bg-white rounded-lg cursor-default shadow-1 hover:bg-indigo-50/90 trans relative overflow-hidden"
+            >
+              <div className="absolute inset-0 z-50 fcenter">
+                <Image
+                  src={`/img/speakers/${s.avatar}`}
+                  alt={s.name}
+                  width={120}
+                  height={120}
+                  className="object-contain rounded-full group-hover:scale-105 trans"
+                />
+                <div className="flex flex-col items-center mt-2 text-center">
+                  <span className="text-xl">{s.name}</span>
+                  <span className="text-[16px] text-gray-500">{s.company}</span>
+                </div>
+              </div>
+              <div className="absolute inset-0 opacity-0 bg-card-hover group-hover:opacity-100 trans"></div>
+            </div>
+          ))}
+        </div>
+      </SectionContainer>
+    </>
+  );
 }
