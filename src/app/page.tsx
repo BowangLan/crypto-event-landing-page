@@ -71,7 +71,7 @@ export default function Home() {
           {sponsors.map((sponsor, i) => {
             return (
               <a
-                className="self-center px-4 py-12 rounded-lg bg-[rgb(226 242 254 / 50%)] fcenter justify-self-stretch trans bg-white hover:bg-blue-50 shadow-1"
+                className="self-center px-4 py-12 rounded-lg bg-[rgb(226 242 254 / 50%)] fcenter justify-self-stretch trans bg-white hover:bg-blue-50 shadow-1 hover:scale-105"
                 href={`//${sponsor.link}`}
                 target="_blank"
                 key={i}
