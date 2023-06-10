@@ -1,12 +1,15 @@
+import AOSInit from "@/components/AOSInit";
 import "./globals.css";
-import { Rubik, Press_Start_2P } from "next/font/google";
+import "aos/dist/aos.css";
+import { Rubik } from "next/font/google";
+import Background from "@/components/Background";
 
 const rubik = Rubik({ subsets: ["latin"] });
-const press = Press_Start_2P({ weight: "400", subsets: ["latin"] });
 
 export const metadata = {
   title: "CryptoOWL",
-  description: "CryptoOWL is the blockchain conference network bringing together the key players of crypto industry and experts to redefine the future of finance. The edition of the CryptoOWL will take place during on August 10, 2023 in Dubai, with the world’s top crypto companies and blockchain entrepreneurs.",
+  description:
+    "CryptoOWL is the blockchain conference network bringing together the key players of crypto industry and experts to redefine the future of finance. The edition of the CryptoOWL will take place during on August 10, 2023 in Dubai, with the world’s top crypto companies and blockchain entrepreneurs.",
 };
 
 const Header = () => {
@@ -27,13 +30,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${rubik.className}`}>
+        {/* <AOSInit /> */}
+        <Background />
         <Header />
-        <main>
+        <main className="">
           {children}
-          <footer className="gap-3 py-6 text-xs text-gray-50 fcenter section-bg">
+          <footer className="relative gap-3 py-6 text-xs text-gray-50 fcenter section-bg">
             <span>@2023 CryptoOWL All rights reserved.</span>
-            <span className="">
-              This website is built by{" "}
+            <span className="md:absolute bottom-6 right-8">
+              Developed by{" "}
               <a
                 href="https://www.linkedin.com/in/bowang-lan-3b5759207/"
                 className="underline"

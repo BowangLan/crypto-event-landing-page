@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -16,8 +16,11 @@
   --shadow-2: rgba(60, 64, 67, 0.30) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 
   /* --section-bg: linear-gradient(90deg, rgba(54,23,110,1) 0%, rgba(138,0,72,1) 60%, rgba(131,33,0,1) 100%); */
-  --section-bg: linear-gradient(90deg, rgba(40,10,94,1) 0%, rgba(93,4,51,1) 60%, rgba(87,23,2,1) 100%);
-  --card-hover-bg: linear-gradient(90deg, rgba(237,226,255,1) 0%, rgba(255,225,241,1) 60%, rgba(255,237,231,1) 100%);
+  /* --section-bg: linear-gradient(90deg, rgba(40,10,94,1) 0%, rgba(93,4,51,1) 60%, rgba(87,23,2,1) 100%); */
+  --section-bg: transparent;
+  --card-hover-bg: linear-gradient(0deg, rgba(237,226,255,1) 0%, rgba(255,225,241,1) 30%, rgb(255, 255, 255) 100%);
+
+  --page-px: 12px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,8 +64,4 @@ body {
 
 .trans {
   transition: all 200ms ease-in-out;
-}
-
-section:nth-child(odd) {
-  
 }
