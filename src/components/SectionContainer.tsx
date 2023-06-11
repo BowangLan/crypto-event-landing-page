@@ -32,7 +32,7 @@ export default function SectionContainer({
       <div className="mx-auto max-w-[1200px] px-8 lg:px-12">
         {title && (
           <motion.h2
-            className={"mb-12 text-[36px] font-bold leading-4 text-left z-80 text-white " + font_press.className}
+            className={"mb-12 text-[32px] font-bold leading-4 text-left z-80 text-white font-press " + font_press.className}
             viewport={{ once: true }}
             initial={INITIAL_STATE}
             whileInView={SHOW_STATE}
@@ -128,7 +128,7 @@ export function TalksSection() {
           <motion.div
             key={i}
             className={
-              "flex items-center px-6 py-8 bg-white rounded-lg group hover:scale-[103%] trans + " +
+              "flex items-center px-8 py-10 bg-white rounded-lg group hover:scale-[103%] trans + " +
               (selectedTalkIndex === i ? "z-60 h-[]" : "")
             }
             // layout
@@ -169,7 +169,7 @@ export function TalksSection() {
               {i + 1}
             </div>
             <div className="flex flex-col h-full gap-4">
-              <h3 className="text-2xl font-bold">{talk.title}</h3>
+              <h3 className={"text-[20px] font-bold font-press " }>{talk.title}</h3>
               <div className="flex items-center gap-3 lg:gap-4">
                 {talk.speaker.map((sp, j) => (
                   <div key={j} className="relative flex items-center gap-2">
