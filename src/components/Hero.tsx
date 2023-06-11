@@ -4,6 +4,7 @@ import React from "react";
 import Button from "@/components/Button";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { motion } from "framer-motion";
+import { font_press } from "@/constants";
 
 export default function Hero() {
   return (
@@ -27,7 +28,7 @@ export default function Hero() {
 
         {/* Line */}
         <motion.h1
-          className="font-press text-[64px] lg:text-[72px] text-center leading-[72px] lg:leading-[80px] mb-1"
+          className={"text-[64px] lg:text-[48px] text-center leading-[72px] lg:leading-[80px] mb-1 " + font_press.className}
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}

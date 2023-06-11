@@ -10,6 +10,7 @@ import { speakers, sponsors, talks } from "@/data";
 import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
+import { font_press } from "@/constants";
 
 const getSpeakerAvatar = (name: string) => {
   const s = speakers.filter((s) => s.name === name);
@@ -31,7 +32,7 @@ export default function SectionContainer({
       <div className="mx-auto max-w-[1200px] px-8 lg:px-12">
         {title && (
           <motion.h2
-            className="mb-12 text-[36px] font-bold leading-4 text-left z-80 text-white"
+            className={"mb-12 text-[36px] font-bold leading-4 text-left z-80 text-white " + font_press.className}
             viewport={{ once: true }}
             initial={INITIAL_STATE}
             whileInView={SHOW_STATE}
@@ -122,7 +123,7 @@ export function TalksSection() {
   return (
     <SectionContainer title="Discussion Topics">
       {/* <div className="fixed inset-0 fcenter z-60 bg-black/50"></div> */}
-      <div className="grid gap-8 lg:gap-12 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-8 lg:gap-12 md:grid-cols-2">
         {talks.map((talk, i) => (
           <motion.div
             key={i}
@@ -167,9 +168,9 @@ export function TalksSection() {
             <div className="flex flex-col flex-none h-full mt-1 mr-6 text-xl font-bold text-gray-500">
               {i + 1}
             </div>
-            <div className="flex flex-col h-full gap-3">
+            <div className="flex flex-col h-full gap-4">
               <h3 className="text-2xl font-bold">{talk.title}</h3>
-              <div className="flex items-center gap-8 lg:gap-12">
+              <div className="flex items-center gap-3 lg:gap-4">
                 {talk.speaker.map((sp, j) => (
                   <div key={j} className="relative flex items-center gap-2">
                     <Image
@@ -185,7 +186,7 @@ export function TalksSection() {
               </div>
               <span
                 className={
-                  "text-gray-500 text-[16px] leading-[28px]" +
+                  "text-gray-500 text-[16px] leading-[36px]" +
                   (selectedTalkIndex === i ? "" : "line-clamp-5")
                 }
               >

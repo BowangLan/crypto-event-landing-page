@@ -8,6 +8,7 @@ import { useScroll, useMotionValueEvent, motion } from "framer-motion";
 const MAX_BLUR = 20;
 
 const calculateBlur = (scrollY: number) => {
+  if (typeof document === 'undefined') return;
   if (scrollY > document.documentElement.clientHeight) {
     return MAX_BLUR;
   }
