@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-20 gap-4 text-white fcenter">
         {/* Line */}
         <motion.div
-          className="flex items-center gap-6 text-white text-[24px]"
+          className="flex items-center flex-col md:flex-row gap-2 md:gap-6 text-white text-[24px]"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
@@ -28,7 +28,7 @@ export default function Hero() {
 
         {/* Line */}
         <motion.h1
-          className={"text-[64px] lg:text-[48px] text-center leading-[72px] lg:leading-[80px] mb-1 " + font_press.className + " font-press"}
+          className={"text-[48px] md:text-[64px] lg:text-[48px] text-center leading-[72px] lg:leading-[80px] mb-1 " + font_press.className + " font-press"}
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}

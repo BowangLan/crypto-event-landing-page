@@ -1,9 +1,7 @@
-import {
-  AboutSection,
-  SpeakersSection,
-  SponsorsSection,
-  TalksSection,
-} from "@/components/SectionContainer";
+import SpeakerSection from "@/components/SpeakerSection";
+import AboutSection from "@/components/AboutSection";
+import SponsorSection from "@/components/SponsorSection";
+import TalksSection from "@/components/TalkSection";
 import Hero from "@/components/Hero";
 
 export default function Home() {
@@ -12,9 +10,9 @@ export default function Home() {
       <Hero />
       <div className="h-0" id="learn-more-anchor"></div>
       <AboutSection />
-      <SponsorsSection />
+      <SponsorSection />
       <TalksSection />
-      <SpeakersSection />
+      <SpeakerSection />
     </>
   );
 }
