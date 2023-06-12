@@ -57,11 +57,7 @@ export default function CountdownTimer({ date }: { date: string }) {
   }, [date]);
 
   return (
-    <motion.div className="flex"
-      initial={INITIAL_NAME}
-      animate={SHOW_NAME}
-      variants={make_fade_in(1.8)}
-    >
+    <motion.div className="flex">
       <CountdownItem value={countdown[0]} label="days" />
       <Separator />
       <CountdownItem value={countdown[1]} label="hours" />
