@@ -1,10 +1,9 @@
 "use client";
 
 import {
-  INITIAL_STATE,
-  SHOW_STATE,
-  SectonVariants,
-  TRANSITION,
+  INITIAL_NAME,
+  SHOW_NAME,
+  make_fade_in,
 } from "@/constants";
 import { motion } from "framer-motion";
 import React from "react";
@@ -29,10 +28,10 @@ export default function SectionContainer({
               font_press.className
             }
             viewport={{ once: true }}
-            initial={INITIAL_STATE}
-            whileInView={SHOW_STATE}
-            exit={INITIAL_STATE}
-            transition={{ ...TRANSITION }}
+            initial={INITIAL_NAME}
+            whileInView={SHOW_NAME}
+            exit={INITIAL_NAME}
+            variants={make_fade_in(0.0)}
           >
             {title}
           </motion.h2>

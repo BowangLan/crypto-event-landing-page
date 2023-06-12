@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  INITIAL_STATE,
-  SHOW_STATE,
-  SectonVariants,
-  TRANSITION,
-} from "@/constants";
-import { speakers, sponsors, talks } from "@/data";
+import { speakers, talks } from "@/data";
 import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";

@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import { Rubik } from "next/font/google";
 import Background from "@/components/Background";
 import { font_press } from "@/constants";
+import Button, { ButtonOutline } from "@/components/Button";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -17,7 +18,15 @@ const Header = () => {
   return (
     <header className="fixed z-50 top-0 inset-x-0 h-[80px] flex items-center justify-between bg-[var(--header-bg)] backdrop-blur-sm z-100">
       <div className="w-full h-full px-8 mx-auto max-w-[1200px] flex items-center">
-        <span className={"text-2xl text-white font-press " + font_press.className}>CryptoOWL</span>
+        <span
+          className={"text-2xl text-white font-press " + font_press.className}
+        >
+          CryptoOWL
+        </span>
+        <div className="flex-1"></div>
+        <div>
+          <ButtonOutline>Buy Ticket</ButtonOutline>
+        </div>
       </div>
     </header>
   );

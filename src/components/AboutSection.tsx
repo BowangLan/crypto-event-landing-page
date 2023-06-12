@@ -3,18 +3,18 @@
 import { motion } from "framer-motion";
 import React from "react";
 import SectionContainer from "./SectionContainer";
-import { INITIAL_STATE, SHOW_STATE, TRANSITION } from "@/constants";
+import { INITIAL_NAME, SHOW_NAME, make_fade_in } from "@/constants";
 
 export default function AboutSection() {
   return (
     <SectionContainer title="About Us" className="section-bg">
       <motion.div
         className="leading-10 text-white"
-        initial={INITIAL_STATE}
-        whileInView={SHOW_STATE}
-        exit={INITIAL_STATE}
+        initial={INITIAL_NAME}
+        whileInView={SHOW_NAME}
+        exit={INITIAL_NAME}
+        variants={make_fade_in(0.0)}
         viewport={{ once: true }}
-        transition={{ ...TRANSITION }}
       >
         CryptoOWL is the blockchain conference network bringing together the key
         players of crypto industry and experts to redefine the future of

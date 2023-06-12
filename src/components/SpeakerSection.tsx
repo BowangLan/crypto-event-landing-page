@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  INITIAL_STATE,
-  SHOW_STATE,
-  SectonVariants,
-  TRANSITION,
-} from "@/constants";
+import { INITIAL_NAME, SHOW_NAME } from "@/constants";
 import { speakers } from "@/data";
 import { motion } from "framer-motion";
 import React from "react";
@@ -15,23 +10,32 @@ import SectionContainer from "./SectionContainer";
 export default function SpeakersSection() {
   return (
     <SectionContainer title="Speakers" className="text-white section-bg">
-      <div className="grid grid-cols-4 gap-8 mt-8 text-black">
+      <motion.div
+        className="grid grid-cols-4 gap-8 mt-8 text-black"
+        initial={INITIAL_NAME}
+        whileInView={SHOW_NAME}
+        viewport={{ once: true }}
+        variants={{
+          hidden: { opacity: 0 },
+          show: {
+            opacity: 1,
+            transition: {
+              duration: 0.5,
+              delay: 0.5,
+              ease: "easeOut",
+              staggerChildren: 0.3,
+            },
+          },
+        }}
+      >
         {speakers.map((s, i) => (
           <motion.div
             key={i}
             className="group fcenter px-4 h-[250px] bg-white rounded-lg cursor-default shadow-1 hover:bg-indigo-50/90 trans relative overflow-hidden"
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
             variants={{
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: {
-                  duration: 0.5,
-                  delay: i * 0.1,
-                  ease: "easeOut",
-                },
               },
             }}
           >
@@ -51,7 +55,7 @@ export default function SpeakersSection() {
             <div className="absolute inset-0 opacity-0 bg-card-hover group-hover:opacity-100 trans"></div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </SectionContainer>
   );
 }

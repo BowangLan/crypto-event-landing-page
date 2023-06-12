@@ -13,7 +13,7 @@ export default function SponsorsSection() {
         {sponsors.map((sponsor, i) => {
           return (
             <motion.a
-              className="self-center px-4 py-12 rounded-lg bg-[rgb(226 242 254 / 50%)] fcenter justify-self-stretch trans bg-white hover:bg-blue-50 shadow-1 hover:scale-105"
+              className="self-center px-4 py-12 rounded-lg bg-[rgb(226 242 254 / 50%)] fcenter justify-self-stretch trans bg-white hover:bg-slate-50 shadow-1 hover:scale-105"
               href={`//${sponsor.link}`}
               target="_blank"
               initial="hidden"
