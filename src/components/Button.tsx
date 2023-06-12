@@ -1,5 +1,6 @@
 "use client";
 
+import { BUY_TICKET_URL } from "@/constants";
 import React from "react";
 
 export default function Button({
@@ -33,5 +34,17 @@ export function ButtonOutline({
     >
       {children}
     </button>
+  );
+}
+
+export function ButtonBuyTicketOutline() {
+  return (
+    <ButtonOutline
+      onClick={() => {
+        window.open(BUY_TICKET_URL);
+      }}
+    >
+      Buy Ticket
+    </ButtonOutline>
   );
 }

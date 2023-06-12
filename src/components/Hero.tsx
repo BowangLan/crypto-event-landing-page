@@ -4,7 +4,13 @@ import React from "react";
 import Button from "@/components/Button";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { motion } from "framer-motion";
-import { INITIAL_NAME, SHOW_NAME, font_press, make_fade_in } from "@/constants";
+import {
+  BUY_TICKET_URL,
+  INITIAL_NAME,
+  SHOW_NAME,
+  font_press,
+  make_fade_in,
+} from "@/constants";
 import Countdown from "./Countdown";
 
 export default function Hero() {
@@ -73,7 +79,14 @@ export default function Hero() {
           >
             Learn More
           </Button>
-          <Button>Buy Ticket</Button>
+          <Button
+            onClick={() => {
+              console.log("buy ticket");
+              window.open(BUY_TICKET_URL);
+            }}
+          >
+            Buy Ticket
+          </Button>
         </motion.div>
       </div>
     </div>

@@ -3,8 +3,11 @@ import "./globals.css";
 import "aos/dist/aos.css";
 import { Rubik } from "next/font/google";
 import Background from "@/components/Background";
-import { font_press } from "@/constants";
-import Button, { ButtonOutline } from "@/components/Button";
+import { BUY_TICKET_URL, font_press } from "@/constants";
+import Button, {
+  ButtonBuyTicketOutline,
+  ButtonOutline,
+} from "@/components/Button";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -25,7 +28,7 @@ const Header = () => {
         </span>
         <div className="flex-1"></div>
         <div>
-          <ButtonOutline>Buy Ticket</ButtonOutline>
+          <ButtonBuyTicketOutline />
         </div>
       </div>
     </header>

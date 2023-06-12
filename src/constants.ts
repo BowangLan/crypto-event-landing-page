@@ -36,3 +36,6 @@ export const font_press = Press_Start_2P({
   subsets: ["latin"],
   display: "swap",
 });
+
+export const BUY_TICKET_URL =
+  "https://www.eventbrite.com/e/techstars-startup-weekend-ottawa-2021-tickets-166066000543?aff=ebdssbdestsearch";
